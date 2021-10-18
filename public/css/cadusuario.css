@@ -1,0 +1,276 @@
+/* CSS reset */
+*, *:before, *:after { 
+  margin:0;
+  padding:0;
+  font-family: Arial,sans-serif;
+}
+ 
+/*========================================================================
+*
+*Resetamos o CSS e tiramos a linha ( underline ) dos links e escondemos as ancoras ( a.links ).
+*
+=========================================================================*/
+
+/* remove a linha dos links */
+a{
+  text-decoration: none;
+}
+ 
+/* esconde as ancoras da tela */
+a.links{
+  display: none;
+}
+
+/*========================================================================
+*
+* Classe ( .content ) que vai envolver nosso conteúdo, ou seja, nossos formulários.
+*
+=========================================================================*/
+
+
+/* Envolver os formulários atacando o ( h1 ). */
+h1{
+  font-size: 48px;
+  color:white;
+  padding: 2px 0 10px 0;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+/*========================================================================
+*
+* Cria uma barra abaixo do texto do cabeçalho separando do conteúdo. 
+* Para isso utilizamo o Pseudo Elementos ( :after ) com seus próprios.
+*
+=========================================================================*/
+h1:after{
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+  background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+}
+
+p{
+  margin-bottom:10px;
+}
+
+
+
+
+/*========================================================================
+*
+* Estilos para os campos ( input ) dos formulários, incluindo o ( submit ).
+*
+=========================================================================*/
+ 
+/*Estilo dos input*/
+.cadpessoa input  {
+  width: 100%;
+  display: inline-block;
+  margin-right: 200px ;
+  margin-bottom: 30px;
+  padding: 1rem;  
+  border:0;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 20px;
+  transition:all .3s ease-out;
+  border-radius: 0;
+}
+.cadpessoa input:focus{
+  border-bottom: 2px solid whitesmoke;
+}
+
+.cadpessoa{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.cadpessoa label{
+  color: #ffffff;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top:13px ;
+  transition: all .3s ease-out;
+}
+
+.cadpessoa input:focus + label, .cadpessoa input:valid + label{
+  font-size: 16px;
+  margin-top: 0;
+  color: whitesmoke;
+}
+ 
+/*estilo do botão submit */
+input[type="submit"]{
+  /* width: 100%; */
+  cursor: pointer;  
+  background: rgb(151, 61, 179);
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;  
+  border: 1px solid #fff;   
+  margin-bottom: 10px;  
+  margin-left: -45px;
+  text-shadow: 0 1px 1px rgb(3, 3, 3);
+  font-family: Arial,sans-serif;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+
+}
+ 
+/*estilo do botão submit no hover */
+input[type="submit"]:hover{
+  background: #ee77c0;
+}
+
+/*========================================================================
+*
+* links que vão mudar de um formulário para outro ao clicar. 
+*
+=========================================================================*/
+
+.link{
+  position: absolute;
+  color: #faf8f8;
+  left: 20%;
+  height: 0px;
+  width: 440px;
+  padding: 17px 30px 20px 30px;
+  font-size: 16px;
+  text-align: right;font-weight: bold;
+  font-weight: bold;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgb(7, 7, 7);
+  border-top: 1px solid #848485;
+  -webkit-border-radius: 0 0  5px 5px;
+  border-radius: 0 0  5px 5px;
+  font-family: Arial,sans-serif;
+}
+ 
+.link a {
+  background: #f7f8f1;
+  padding: 9px;
+  color: rgb(3, 3, 3);
+  margin-left: 10px;
+  border: 1px solid #910479;
+ 
+  -webkit-border-radius: 4px;
+  border-radius: 4px;  
+ 
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s  linear;
+}
+ 
+.link a:hover {
+  color: #d739d7;
+  background: #f7f7f7;
+  border: 1px solid #cc65a1;
+}
+
+/* Estilo do formulário */
+#cadastro, 
+#login{
+  display: flex;
+  position: absolute;
+  top: 150px;
+  width: 55%;   
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 18px 6% 60px 6%;
+  margin-left: 260px;
+  border: 1px solid white;
+  border-radius: 1rem;
+   
+  box-shadow: 0 0 2rem white;
+  -webkit-box-shadow: 5px;
+  border-radius: 5px;
+   
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+ 
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+/* Efeito ao clicar no botão ( Ir para Login ) */
+#paracadastro:target ~ .content #cadastro,
+#paralogin:target ~ .content #login{
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+ 
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+ 
+/* Efeito ao clicar no botão ( Cadastre-se ) */
+#registro:target ~ .content #login,
+#paralogin:target ~ .content #cadastro{
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+/*========================================================================
+*
+* keyframes , que daram os efeitos nas trocas dos formulários.
+*
+=========================================================================*/
+
+/*fadeInLeft*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+ 
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+ 
+/*fadeOutLeft*/
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+ 
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}

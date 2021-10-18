@@ -1,0 +1,24 @@
+header{
+  display: flex;
+  justify-content: center;
+}
+
+.card-detalhes{
+  width: 20rem;
+  padding: 3rem;
+  box-shadow: 2px 2px 1px 0px #00000050;
+  margin: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #ffffff80;
+  color: #000;
+  text-decoration: none;
+}
+
+.card-detalhes img{
+  width: 15rem;
+  height: 15rem;
+}

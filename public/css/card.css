@@ -1,0 +1,62 @@
+section#detalhes{
+    display: flex;
+    margin: auto;
+    width: 15rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 0 1rem #00000060;
+  }
+ 
+  
+  section#detalhes div#infos p {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-stroke-width: 2px; 
+    color: rgb(244, 245, 248);
+  
+  }
+  
+  section#detalhes div#infos div#info-datail {
+    
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    border-radius: 1rem;
+  }
+  
+  section#detalhes div#infos div#info-datail h3 {
+    font-size: 1rem;
+    /* font-weight: 100; */
+    padding: 0.5rem 0 1rem 0;
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+  }
+  section#detalhes div#infos h3 {
+    padding-top: 3rem;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(110, 109, 109);
+  }
+
+  section#detalhes div#infos h2 {
+ 
+ 
+    padding: 1rem;
+    color: rgb(58, 116, 250);
+    border-radius: 1rem;
+    width: 50%;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  #detalhes h4{
+    color: rgb(58, 116, 250);
+  }

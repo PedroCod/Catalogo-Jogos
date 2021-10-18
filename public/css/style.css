@@ -1,0 +1,112 @@
+html {box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit;}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+  }
+
+  p {
+    text-align: justify;
+    text-indent: 50px;
+}
+a{
+/*Trocar cor dos links */
+    color: #f8f1f1;
+    text-decoration: none;
+}
+
+body {
+  background-image: url("/img/d044.jpg");
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover; /*Faz a imgem de fundo preencher todo o espaço em que ela está */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat;
+}
+  .card{
+    width: 20rem;
+    padding: 3rem;
+    box-shadow: 2px 2px 1px 0px #00000050;
+    margin: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+    background-color: #ffffff80;
+    color: #000;
+    text-decoration: none;
+  }
+
+
+  .card:hover{
+    transform: scale(1.1);
+  }
+
+  .card img{
+    width: 15rem;
+    height: 15rem;
+  }
+/* =============================================
+ *   FOOTER
+ * ============================================= */
+footer p a:hover {  
+  color: rgb(255, 68, 230);
+}
+
+footer {
+  background-color:#0c0c0c;
+  padding: 4rem;
+  justify-content: center;
+  background-size: cover; /*Faz a imgem de fundo preencher todo o espaço em que ela está */
+  background-position: center; /* Centraliza a imagem de fundo */
+}
+
+footer p {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #f89eec;
+}
+
+footer p a {
+  font-family: 'Courier New', Courier, monospace;
+  color: #fdfdfd;
+  font-size: 1rem;
+  padding: 0px;
+  text-align: center;
+  justify-content: space-between ;
+  
+}
+
+ section#message {
+  padding: 1.5rem;
+  background-color: rgb(197, 255, 214);
+  color: #004d04;
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span#close {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+span#close:hover{
+  color: rgb(255, 0, 0);
+  transform: scale(1.5);
+}

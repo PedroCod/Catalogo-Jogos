@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/detalhes.css">
+  <title>Game Catalogo | Detalhes</title>
+</head>
+
+<body>
+
+  <article>
+    <a class="logo " href="/" data-scroll>Game Catalogo</a>
+
+    <nav class="nav-collapse">
+      <ul>
+        <li class="menu-item active"><a href="/" data-scroll>Home</a></li>
+        <li class="menu-item"><a href="/sobre" data-scroll>Quem somos</a></li>
+        <li class="menu-item"><a href="/cadastro" data-scroll>Cadrastro</a></li>
+        <li class="menu-item"><a href="/login" data-scroll>Login</a></li>
+      
+      </ul>
+    </nav>
+  </article>
+
+   <header>
+        <h1> Detalhes de <%= jogos.nome%> </h1>
+    </header>
+
+    <section id="detalhes">
+      <div class=card-detalhes>
+         <ul>
+          <li>Nome: <%= jogos.nome %></li>
+          <li>Descrição: <%= jogos.descricao %></li>
+          <li>Genero: <%= jogos.genero %></li>
+          <img src="<%= jogos.imagem %>" width=200>
+          <a href="/deletar/<%= jogos.id %>">DELETAR!</a>
+
+        </ul>
+      </div>
+  </section>
+
+  <footer>
+    <p>Projeto final | Blue | M02</br>
+      <a href="https://www.linkedin.com/in/danusajesus" target="_blank" target="_blank">Danusa Jesus</a> |
+      <a href="https://www.linkedin.com/in/pedro-henrique-soares-da-luz-40b18b21a/" target="_blank" target="_blank"> Pedro Henhique </a>
+    </p>
+  </footer>
+  
+  
+  <script src="./js/fixed-responsive-nav.js"></script>
+  <script src="./js/responsive-nav.js"></script>
+  <script src="./js/nav.js"></script>
+  <script src="/js/script.js"></script>
+  </body>
+  
+  </html>
+
