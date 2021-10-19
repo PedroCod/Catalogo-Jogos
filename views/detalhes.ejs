@@ -32,18 +32,19 @@
   </article>
 
    <header>
-        <h1> Detalhes de <%= jogos.nome%> </h1>
+        <h1> Detalhes de <%= jogo.nome%> </h1>
     </header>
 
     <section id="detalhes">
       <div class=card-detalhes>
          <ul>
-          <li>Nome: <%= jogos.nome %></li>
-          <li>Descrição: <%= jogos.descricao %></li>
-          <li>Genero: <%= jogos.genero %></li>
-          <img src="<%= jogos.imagem %>" width=200>
-          <a href="/deletar/<%= jogos.id %>">DELETAR!</a>
-
+          <li>Nome: <%= jogo.nome %></li>
+          <li>Descrição: <%= jogo.descricao %></li>
+          <li>Genero: <%= jogo.genero %></li>
+          <img src="<%= jogo.imagem %>" width=200>
+          <form action="/deletar/<%= jogo.id %>" method="POST">
+            <button type="submit">Deletar</button>
+        </form>
         </ul>
       </div>
   </section>

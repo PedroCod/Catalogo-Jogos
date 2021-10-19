@@ -16,19 +16,21 @@ const Confirmlogin = require("./models/confirmlogin");
 
 
 app.get("/", async (req, res) => {
+  const jogo = await Jogos.findAll();
   
-  const jogos = await Jogos.findAll();
-  
+  setTimeout(() => {
+    message = "";
+  }, 1000);
   res.render("index", {
-    jogos,
+    jogo,
+    message
   });
 });
 
   app.get("/detalhes/:id", async (req, res) => {
-    const jogos = await Jogos.findByPk(req.params.id);
-    
+    const jogo = await Jogos.findByPk(req.params.id);
     res.render("detalhes", {
-      jogos,
+      jogo,
     });
   });
 
@@ -44,7 +46,7 @@ app.get("/cadusuario", (req, res) => {
   });
 });
 
-app.get("/login", (req, res) => {
+app.get("/login", async (req, res) => {
   res.render("login");
 });
 
@@ -62,28 +64,22 @@ app.post("/new", async (req, res) => {
     genero,
   });
 
-  res.redirect("/",{
-    jogo,
-  });
-
+  res.redirect("/");
 });
 app.post("/newcad", async (req,res) =>{
   const { nome, email, senha, confirmsenha } = req.body;
-
+  const jogo = await Jogos.findAll();
   const login = await Confirmlogin.create({
     nome,
     email,
     senha,
     confirmsenha,
-  });
+  }); 
   res.render("index",{
     login,
-  });
+    jogo
+  })
 });
-app.get("/logado", (req,res)=>{
-
-});
-
 
 app.get("/editar/:id", async (req, res) => {  
   const jogo = await Jogos.findByPk(req.params.id)
@@ -106,7 +102,7 @@ app.post("/editar/:id", async (req, res) => {
 
   const jogoEditado = await jogo.save();
 
-  res.render("editar", {
+  res.render("index", {
     jogo: jogoEditado,
     message: "Jogo editado com sucesso!",
   });
@@ -117,6 +113,7 @@ app.get("/deletar/:id", async (req, res) => {
 
   res.render("deletar", {
     jogo,
+    message
   });
 });
 app.post("/deletar/:id", async (req, res) => {
@@ -124,10 +121,8 @@ app.post("/deletar/:id", async (req, res) => {
 
 
   await jogo.destroy();
-
-  res.render("index", {
-    message: `Jogo ${jogo.nome} deletado com sucesso!`,
-  });
+  message = `Jogo ${jogo.nome} deletado com sucesso!`
+  res.redirect("/");
 });
 
 app.listen(port, () =>

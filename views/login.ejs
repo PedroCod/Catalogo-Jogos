@@ -32,29 +32,29 @@
 
   <div class="container" >      
       <div id="login">
-        <form action="/logar" method="POST">
           <h1>Login</h1> 
+          <div id ='msgError'></div>
           <div class="login">
             <input type="email" name="email" id="email" placeholder="" required>
-            <label for="email">Seu Email</label>
+            <label id='emailLabel' for="email">Seu Email</label>
         </div>
         <div class="login">
           <input type="password" name="senha" id="senha" placeholder="" required>
-          <label for="senha">Sua Senha</label>
+          <label id='senhaLabel' for="senha">Sua Senha</label>
         </div>
         <div class="login">
           <input type="checkbox" name="manterlogado" id="manterlogado" value=""> 
           <label for="manterlogado">Manter-me logado</label>
         </div>
            
-        <button type="submit">Entrar</button>
+        <button onclick='entrar()'> Entrar </button>
 
            
           <p class="link">
             Ainda não tem conta?
             <a href="/cadusuario">Cadastre-se</a>
           </p>
-        </form>
+
     </div>
 </div>
     <script src="../js/fastclick.js"></script>
