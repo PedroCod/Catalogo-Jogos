@@ -1,10 +1,12 @@
 /* CSS reset */
-*, *:before, *:after { 
-  margin:0;
-  padding:0;
-  font-family: Arial,sans-serif;
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
- 
+
 /*========================================================================
 *
 *Resetamos o CSS e tiramos a linha ( underline ) dos links e escondemos as ancoras ( a.links ).
@@ -12,12 +14,12 @@
 =========================================================================*/
 
 /* remove a linha dos links */
-a{
+a {
   text-decoration: none;
 }
- 
+
 /* esconde as ancoras da tela */
-a.links{
+a.links {
   display: none;
 }
 
@@ -27,47 +29,48 @@ a.links{
 *
 =========================================================================*/
 
-.container{
+.container {
   width: 500px;
-  min-height: 560px;    
+  min-height: 560px;
   margin: 0px auto 299px;
-  position: relative;   
+  position: relative;
 }
 
 /* Envolver os formulários atacando o ( h1 ). */
-h1{
+h1 {
   font-size: 48px;
   color: white;
   padding: 2px 0 10px 0;
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   text-align: center;
   padding-bottom: 30px;
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
 }
+
 /*========================================================================
 *
 * Cria uma barra abaixo do texto do cabeçalho separando do conteúdo. 
 * Para isso utilizamo o Pseudo Elementos ( :after ) com seus próprios.
 *
 =========================================================================*/
-h1:after{
+h1:after {
 
   content: ' ';
   display: block;
   width: 100%;
   height: 2px;
   margin-top: 10px;
-  background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-  background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+  background: -webkit-linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+  background: linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
 }
 
-p{
-  margin-bottom:20px;
-  font-family: Arial,sans-serif;
+p {
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
 }
- 
-.container p:first-child{
+
+.container p:first-child {
   margin: 0px;
 }
 
@@ -81,45 +84,50 @@ p{
 input {
   outline: none;
 }
- 
+
 /*Estilo dos input,  menos o checkbox */
-.login input:not([type="checkbox"]){
+.login input:not([type="checkbox"]) {
   width: 100%;
   padding: 5px 5px;
   display: inline-block;
-  border:0;
+  border: 0;
   border-bottom: 1px solid #ffffff;
   background-color: transparent;
   outline: none;
   min-width: 180px;
   font-size: 16px;
-  transition:all .3s ease-out;
+  transition: all .3s ease-out;
   border-radius: 0;
 }
-.login input:focus:not([type="checkbox"]){
+
+.login input:focus:not([type="checkbox"]) {
   border-bottom: 2px solid whitesmoke;
 }
-.login:not([type="checkbox"]){
+
+.login:not([type="checkbox"]) {
   position: relative;
   padding-top: 13px;
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.login label:not([type="checkbox"]){
+
+.login label:not([type="checkbox"]) {
   color: #ffffff;
   pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
-  margin-top:13px ;
+  margin-top: 13px;
   transition: all .3s ease-out;
 }
-.login input:focus + label, .login input:valid + label{
+
+.login input:focus+label,
+.login input:valid+label {
   font-size: 13px;
   margin-top: 0;
   color: whitesmoke;
 }
- 
+
 
 
 /*========================================================================
@@ -128,7 +136,7 @@ input {
 *
 =========================================================================*/
 
-.link{
+.link {
   position: absolute;
   color: #faf8f8;
   left: 0px;
@@ -136,30 +144,31 @@ input {
   width: 440px;
   padding: 17px 30px 20px 30px;
   font-size: 16px;
-  text-align: right;font-weight: bold;
+  text-align: right;
+  font-weight: bold;
   font-weight: bold;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: rgb(7, 7, 7);
   border-top: 1px solid #848485;
-  -webkit-border-radius: 0 0  5px 5px;
-  border-radius: 0 0  5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
 }
- 
+
 .link a {
-  
+
   background: #f7f8f1;
   padding: 6px;
   color: rgb(3, 3, 3);
   margin-left: 10px;
   border: 1px solid #910479;
- 
+
   -webkit-border-radius: 4px;
-  border-radius: 4px;  
- 
+  border-radius: 4px;
+
   -webkit-transition: all 0.4s linear;
-  transition: all 0.4s  linear;
+  transition: all 0.4s linear;
 }
- 
+
 .link a:hover {
   color: #d739d7;
   background: #f7f7f7;
@@ -167,12 +176,12 @@ input {
 }
 
 /* Estilo do formulário */
-#cadastro, 
-#login{
+#cadastro,
+#login {
   display: flex;
   position: absolute;
   top: 0px;
-  width: 88%;   
+  width: 88%;
   justify-content: center;
   flex-wrap: wrap;
   padding: 18px 6% 60px 6%;
@@ -184,19 +193,19 @@ input {
 }
 
 /* Efeito ao clicar no botão ( Ir para Login ) */
-#paracadastro:target ~ .content #cadastro,
-#paralogin:target ~ .content #login{
+#paracadastro:target~.content #cadastro,
+#paralogin:target~.content #login {
   z-index: 2;
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
- 
+
   -webkit-animation-delay: .1s;
   animation-delay: .1s;
 }
- 
+
 /* Efeito ao clicar no botão ( Cadastre-se ) */
-#registro:target ~ .content #login,
-#paralogin:target ~ .content #cadastro{
+#registro:target~.content #login,
+#paralogin:target~.content #cadastro {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
 }
@@ -213,40 +222,44 @@ input {
     opacity: 0;
     -webkit-transform: translateX(-20px);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
   }
 }
- 
+
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
     transform: translateX(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
- 
+
 /*fadeOutLeft*/
 @-webkit-keyframes fadeOutLeft {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
   }
+
   100% {
     opacity: 0;
     -webkit-transform: translateX(-20px);
   }
 }
- 
+
 @keyframes fadeOutLeft {
   0% {
     opacity: 1;
     transform: translateX(0);
   }
+
   100% {
     opacity: 0;
     transform: translateX(-20px);
@@ -255,30 +268,30 @@ input {
 
 
 button {
-  cursor: pointer;  
+  cursor: pointer;
   background: rgb(151, 61, 179);
   padding: 8px 5px;
   color: #fff;
-  font-size: 20px;  
-  border: 1px solid #fff;   
-  margin-bottom: 10px;  
+  font-size: 20px;
+  border: 1px solid #fff;
+  margin-bottom: 10px;
   margin-left: -45px;
   text-shadow: 0 1px 1px rgb(3, 3, 3);
   border-radius: 5px;
   transition: all 0.2s ease-out;
-  }
-  
+}
+
 button:hover {
   background-color: rgb(238, 40, 106);
   color: #fff;
   transform: scale(1.1);
-  }
+}
 
-  #msgError{
-    text-align: center;
-    color: #ff0000;
-    background-color: #ffbbbb;
-    padding: 10px;
-    border-radius: 4px;
-    display: none;
-  }
+#msgError {
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
