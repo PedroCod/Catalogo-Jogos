@@ -30,7 +30,7 @@ section#editar h2 {
    
   }
   
-  .label-cadastro input {
+  .label-editar input {
   width: 100%;
   display: inline-block;
   margin-right: 200px ;
@@ -45,17 +45,17 @@ section#editar h2 {
   transition:all .3s ease-out;
   border-radius: 0;
   }
-.label-cadastro input:focus{
+  .label-editar input:focus{
   border-bottom: 2px solid whitesmoke;
   }
-.label-cadastro{
+  .label-editar{
   position: relative;
   padding-top: 13px;
   margin-top: 5%;
   margin-bottom: 5%;
   }
   
-.label-cadastro label{
+  .label-editar label{
   color: #ffffff;
   pointer-events: none;
   position: absolute;
@@ -65,17 +65,17 @@ section#editar h2 {
   transition: all .3s ease-out;
   }
   
-.label-cadastro input:focus + label, .label-cadastro input:valid + label{
+  .label-editar input:focus + label, .label-editar input:valid + label{
   font-size: 16px;
   margin-top: 0;
   color: whitesmoke;
   }
-section#cadastrar form div label {
+section#editar form div label {
   font-size: 2rem;
   color: rgb(244, 244, 248);
   }
   
-section#cadastrar form button {
+section#editar form button {
   border: 1px solid rgb(255, 255, 255);
   background-color: #fff;
   color: rgb(243, 14, 232);
@@ -91,7 +91,7 @@ section#cadastrar form button {
   width: 40%;
   }
   
-section#cadastrar form button:hover {
+section#editar form button:hover {
   background-color: rgb(238, 40, 106);
   color: #fff;
   transform: scale(1.1);
