@@ -37,13 +37,8 @@ app.get("/cadastro", (req, res) => {
     message,
   });
 });
-
-// app.get("/login", async (req, res) => {
-//   res.render("login");
-// });
-
-app.get("/sobre", (req, res) => {
-  res.render("sobre");
+app.get("/sobre",(req,res)=>{
+  res.render("sobrenos")
 });
 
 app.post("/new", async (req, res) => {
@@ -58,20 +53,7 @@ app.post("/new", async (req, res) => {
 
   res.redirect("/");
 });
-// app.post("/newcad", async (req,res) =>{
-//   const { nome, email, senha, confirmsenha } = req.body;
-//   const jogo = await Jogos.findAll();
-//   const login = await Confirmlogin.create({
-//     nome,
-//     email,
-//     senha,
-//     confirmsenha,
-//   }); 
-//   res.render("index",{
-//     login,
-//     jogo
-//   })
-// });
+
 
 app.get("/editar/:id", async (req, res) => {  
   const jogo = await Jogos.findByPk(req.params.id)
@@ -93,11 +75,9 @@ app.post("/editar/:id", async (req, res) => {
   jogo.genero = genero
 
   const jogoEditado = await jogo.save();
-
-  res.render("index", {
-    jogo: jogoEditado,
-    message: "Jogo editado com sucesso!",
-  });
+  jogoEditado,
+message = "Jogo editado com sucesso!",
+  res.redirect("/");
 });
 
 app.get("/deletar/:id", async (req, res) => {

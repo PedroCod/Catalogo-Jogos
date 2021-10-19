@@ -9,9 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport"
     content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/nav.css">
-  <link rel="stylesheet" href="./css/editar.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/editar.css">
   <title>Game Catalogo | Editar</title>
 </head>
 
@@ -24,15 +24,14 @@
         <li class="menu-item active"><a href="/" data-scroll>Home</a></li>
         <li class="menu-item"><a href="/sobre" data-scroll>Quem somos</a></li>
         <li class="menu-item"><a href="/cadastro" data-scroll>Cadrastro</a></li>
-        <!-- <li class="menu-item"><a href="/login" data-scroll>Login</a></li> -->
 
       </ul>
     </nav>
   </article>
-  
+
   <header id="registrar">
     <h1>Editar jogo</h1>
-</header>
+  </header>
 
   <% if(message != "") {  %>
   <section id="message">
@@ -44,21 +43,21 @@
   <section id="editar">
     <form action="/editar/<%= jogo.id %>" method="POST">
       <div class="label-editar">
-        <label for="nome">Nome do jogo: </label>
         <input type="text" name="nome" id="nome" placeholder="" value="<%= jogo.nome %>" required>
+        <label for="nome">Nome do jogo: </label>
       </div>
 
       <div class="label-editar">
-        <label for="descricao">Descricao: </label>
         <input type="text" name="descricao" id="descricao" placeholder="" value="<%= jogo.descricao %>" required>
+        <label for="descricao">Descricao: </label>
       </div>
       <div class="label-editar">
-        <label for="imagem">Imagem: </label>
         <input type="text" name="imagem" id="imagem" placeholder="" value="<%= jogo.imagem %>" required>
+        <label for="imagem">Imagem: </label>
       </div>
       <div class="label-editar">
-        <label for="genero">Genero: </label>
         <input type="text" name="genero" id="genero" placeholder="" value="<%= jogo.genero %>" required>
+        <label for="genero">Genero: </label>
       </div>
       <button type="submit">Editar</button>
     </form>
