@@ -1,16 +1,17 @@
 header {
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .card-detalhes {
   width: 50%;
-  padding: 3rem;
+  padding: 5rem;
   box-shadow: 2px 2px 1px 0px #00000050;
-  margin: 2rem;
+  margin-left: 25%;
   border-radius: 1rem;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   background-color: #ffffff80;

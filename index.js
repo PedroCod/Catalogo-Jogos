@@ -12,8 +12,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
 const Jogos = require("./models/jogos");
-const Confirmlogin = require("./models/confirmlogin");
-
 
 app.get("/", async (req, res) => {
   const jogo = await Jogos.findAll();
@@ -40,15 +38,15 @@ app.get("/cadastro", (req, res) => {
   });
 });
 
-app.get("/cadusuario", (req, res) => {
-  res.render("cadusuario",{
+app.get("/sobre", (req, res) => {
+  res.render("sobre",{
     message
   });
 });
 
-app.get("/login", async (req, res) => {
-  res.render("login");
-});
+// app.get("/login", async (req, res) => {
+//   res.render("login");
+// });
 
 app.get("/sobre", (req, res) => {
   res.render("sobre");
@@ -66,20 +64,20 @@ app.post("/new", async (req, res) => {
 
   res.redirect("/");
 });
-app.post("/newcad", async (req,res) =>{
-  const { nome, email, senha, confirmsenha } = req.body;
-  const jogo = await Jogos.findAll();
-  const login = await Confirmlogin.create({
-    nome,
-    email,
-    senha,
-    confirmsenha,
-  }); 
-  res.render("index",{
-    login,
-    jogo
-  })
-});
+// app.post("/newcad", async (req,res) =>{
+//   const { nome, email, senha, confirmsenha } = req.body;
+//   const jogo = await Jogos.findAll();
+//   const login = await Confirmlogin.create({
+//     nome,
+//     email,
+//     senha,
+//     confirmsenha,
+//   }); 
+//   res.render("index",{
+//     login,
+//     jogo
+//   })
+// });
 
 app.get("/editar/:id", async (req, res) => {  
   const jogo = await Jogos.findByPk(req.params.id)
@@ -128,4 +126,3 @@ app.post("/deletar/:id", async (req, res) => {
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
 );
-
