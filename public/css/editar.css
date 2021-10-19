@@ -1,82 +1,98 @@
-article#content ul li {
-    padding: 1rem 1rem 1rem 3rem;
-    font-size: 1.2rem;
+section#editar {
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 20rem 10rem 20rem;
+  box-shadow: 0 0 1rem #00000060;
+  border-radius: 1rem;
+  margin: 10rem;
+  border: 1px solid white;
+  box-shadow: 0 0 2rem #ffffff;
   }
   
-  article#content a#editar{
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    background-color: rgb(68, 105, 255);
-    color: #fff;
-    border-radius: 3rem;
-    border: 0.2rem solid rgb(255, 238, 0);
-    transition: 0.5s;
-    font-weight: bold;
-    position: absolute;
-    z-index: 10;
-    right: 10rem;
-    top: 32rem;
+section#editar h2 {
+  color:black;
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: 2.5rem;
+  width: 100%;
+  }
+
+  header#registrar h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #f8f8f8;
+  font-size: 30pt;
+  padding: 0px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+   
   }
   
-  article#content a#editar:hover {
-    background-color: #fff;
-    color: rgb(68, 105, 255);
-    border: 0.2rem solid rgb(68, 105, 255);
+  .label-cadastro input {
+  width: 100%;
+  display: inline-block;
+  margin-right: 200px ;
+  margin-bottom: 30px;
+  padding: 1rem;  
+  border:0;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 20px;
+  transition:all .3s ease-out;
+  border-radius: 0;
+  }
+.label-cadastro input:focus{
+  border-bottom: 2px solid whitesmoke;
+  }
+.label-cadastro{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   }
   
-  section#editar {
-    background-color: rgb(177, 230, 255);
-    padding: 3rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.label-cadastro label{
+  color: #ffffff;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top:13px ;
+  transition: all .3s ease-out;
   }
   
-  section#editar h2 {
-    color: rgb(0, 51, 255);
-    text-align: center;
-    padding-bottom: 3rem;
-    font-size: 2.5rem;
-    width: 100%;
+.label-cadastro input:focus + label, .label-cadastro input:valid + label{
+  font-size: 16px;
+  margin-top: 0;
+  color: whitesmoke;
+  }
+section#cadastrar form div label {
+  font-size: 2rem;
+  color: rgb(244, 244, 248);
   }
   
-  section#editar form {
-    width: 50%;
+section#cadastrar form button {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #fff;
+  color: rgb(243, 14, 232);
+  padding: 1rem;
+  font-size: 10pt;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  width: 40%;
   }
   
-  section#inscrever form div input {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.3rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    outline: none;
-    border: none;
-  }
-  
-  section#editar form div label {
-    font-size: 1.3rem;
-  }
-  
-  section#editar form button {
-    border: 1px solid #3359ec;
-    background-color: #fff;
-    color: #3359ec;
-    padding: 1rem;
-    font-size: 0.8vw;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    display: block;
-    margin: auto;
-    margin-top: 2rem;
-    cursor: pointer;
-    transition: 0.3s ease-out;
-    width: 40%;
-  }
-  
-  section#editar form button:hover {
-    background-color: #3359ec;
-    color: #fff;
-    transform: scale(1.1);
+section#cadastrar form button:hover {
+  background-color: rgb(238, 40, 106);
+  color: #fff;
+  transform: scale(1.1);
   }

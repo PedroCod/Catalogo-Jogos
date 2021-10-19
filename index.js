@@ -38,12 +38,6 @@ app.get("/cadastro", (req, res) => {
   });
 });
 
-app.get("/sobre", (req, res) => {
-  res.render("sobre",{
-    message
-  });
-});
-
 // app.get("/login", async (req, res) => {
 //   res.render("login");
 // });

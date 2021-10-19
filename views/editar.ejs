@@ -29,6 +29,10 @@
       </ul>
     </nav>
   </article>
+  
+  <header id="registrar">
+    <h1>Editar jogo</h1>
+</header>
 
   <% if(message != "") {  %>
   <section id="message">
@@ -39,20 +43,20 @@
   <% if(jogo != null) {  %>
   <section id="editar">
     <form action="/editar/<%= jogo.id %>" method="POST">
-      <div>
+      <div class="label-editar">
         <label for="nome">Nome do jogo: </label>
         <input type="text" name="nome" id="nome" placeholder="" value="<%= jogo.nome %>" required>
       </div>
 
-      <div>
+      <div class="label-editar">
         <label for="descricao">Descricao: </label>
         <input type="text" name="descricao" id="descricao" placeholder="" value="<%= jogo.descricao %>" required>
       </div>
-      <div>
+      <div class="label-editar">
         <label for="imagem">Imagem: </label>
         <input type="text" name="imagem" id="imagem" placeholder="" value="<%= jogo.imagem %>" required>
       </div>
-      <div>
+      <div class="label-editar">
         <label for="genero">Genero: </label>
         <input type="text" name="genero" id="genero" placeholder="" value="<%= jogo.genero %>" required>
       </div>
