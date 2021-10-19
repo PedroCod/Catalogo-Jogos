@@ -1,5 +1,5 @@
 /* =============================================
- *   FIXED RESPONSIVE NAV
+ *  NAV RESPONSIVA FIXO
  * ============================================= */
 
 body,
@@ -60,7 +60,7 @@ a:hover {
 }
 
 /* ------------------------------------------
-  RESPONSIVE NAV STYLES
+  ESTILOS DE NAV RESPONSIVA
 --------------------------------------------- */
 
 .nav-collapse ul {
@@ -118,7 +118,7 @@ a:hover {
 }
 
 /* ------------------------------------------
-  FIXED ARTICLE
+  ARTIGO FIXO
 --------------------------------------------- */
 
 article {
@@ -181,7 +181,7 @@ article {
 }
 
 /* ------------------------------------------
-  NAVIGATION STYLES
+  NAVEGAÇÃO
 --------------------------------------------- */
 
 .fixed {
@@ -262,7 +262,7 @@ article {
 }
 
 /* ------------------------------------------
-  NAV TOGGLE STYLES
+  NAV TOGGLE
 --------------------------------------------- */
 
 @font-face {
@@ -290,9 +290,9 @@ article {
 
 .nav-toggle:before {
   color: #fff;
-  /* Edit this to change the icon color */
+  /* Mudar a cor do ícone*/
   font: normal 28px/55px "responsivenav";
-  /* Edit font-size (28px) to change the icon size */
+  /* Edite o tamanho da fonte (28px) para alterar o tamanho do ícone */
   text-transform: none;
   text-align: center;
   position: absolute;

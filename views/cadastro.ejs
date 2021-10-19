@@ -14,65 +14,62 @@
 </head>
 
 <body>
+    <article>
+        <a class="logo " href="/" data-scroll>Game Catalogo</a>
 
-    <body>
+        <nav class="nav-collapse">
+            <ul>
+                <li><a href="/" data-scroll>Home</a></li>
+                <li><a href="/sobre" data-scroll>Quem somos</a></li>
+                <li><a href="/cadastro" data-scroll>Cadrastro</a></li>
+            </ul>
+        </nav>
+    </article>
 
-        <article>
-            <a class="logo " href="/" data-scroll>Game Catalogo</a>
-            <nav class="nav-collapse">
-                <ul>
-                    <li class="menu-item active"><a href="/" data-scroll>Home</a></li>
-                    <li class="menu-item"><a href="/sobre" data-scroll>Quem somos</a></li>
-                    <li class="menu-item"><a href="/cadastro" data-scroll>Cadrastro</a></li>
-                </ul>
-            </nav>
+    <header id="registrar">
+        <h1>Cadastrar jogo</h1>
+    </header>
 
-        </article>
+    <section id="cadastrar">
+        <form action="/new" method="POST">
 
-        <header id="registrar">
-            <h1>Cadastrar jogo</h1>
-        </header>
+            <div class="label-cadastro">
+                <input type="text" name="nome" id="nome" placeholder="" required>
+                <label for="nome">Nome do jogo: </label>
+            </div>
 
-        <section id="cadastrar">
-            <form action="/new" method="POST">
+            <div class="label-cadastro">
+                <input type="text" name="descricao" id="descricao" placeholder="" required>
+                <label for="descricao">Descricao: </label>
+            </div>
 
-                <div class="label-cadastro">
-                    <input type="text" name="nome" id="nome" placeholder="" required>
-                    <label for="nome">Nome do jogo: </label>
-                </div>
+            <div class="label-cadastro">
+                <input type="text" name="imagem" id="imagem" placeholder="" required>
+                <label for="imagem">Imagem: </label>
+            </div>
 
-                <div class="label-cadastro">
-                    <input type="text" name="descricao" id="descricao" placeholder="" required>
-                    <label for="descricao">Descricao: </label>
-                </div>
+            <div class="label-cadastro">
+                <input type="text" name="genero" id="genero" placeholder="" required>
+                <label for="genero">Genero: </label>
+            </div>
 
-                <div class="label-cadastro">
-                    <input type="text" name="imagem" id="imagem" placeholder="" required>
-                    <label for="imagem">Imagem: </label>
-                </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
 
-                <div class="label-cadastro">
-                    <input type="text" name="genero" id="genero" placeholder="" required>
-                    <label for="genero">Genero: </label>
-                </div>
-
-                <button type="submit">Cadastrar</button>
-            </form>
-        </section>
-
-        <footer id="rodape">
-            <p>Projeto final - Blue_C007_M02</br>
-                <a href="" target="_blank" target="_blank">Danusa Jesus</a> |
-                <a href="" target="_blank" target="_blank"> Pedro Henhique </a>
-            </p>
-        </footer>
-        <script src="../js/fastclick.js"></script>
-        <script src="/js/scroll.js"></script>
-        <script src="../js/fixed-responsive-nav.js"></script>
-        <script src="../js/responsive-nav.js"></script>
-        <script src="/js/nav.js"></script>
-        <script src="/js/script.js"></script>
-        <script type="text/javascript" src="/js/script.js"></script>
-    </body>
+    <footer id="rodape">
+        <p>Projeto final - Blue_C007_M02</br>
+            <a href="" target="_blank" target="_blank">Danusa Jesus</a> |
+            <a href="" target="_blank" target="_blank"> Pedro Henhique </a>
+        </p>
+    </footer>
+    <script src="../js/fastclick.js"></script>
+    <script src="/js/scroll.js"></script>
+    <script src="../js/fixed-responsive-nav.js"></script>
+    <script src="../js/responsive-nav.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/script.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
 
 </html>
