@@ -59,7 +59,25 @@ p{
 }
 
 
+form button {
+  cursor: pointer;  
+  background: rgb(151, 61, 179);
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;  
+  border: 1px solid #fff;   
+  margin-bottom: 10px;  
+  margin-left: -45px;
+  text-shadow: 0 1px 1px rgb(3, 3, 3);
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+  }
 
+  form button:hover {
+  background-color: rgb(238, 40, 106);
+  color: #fff;
+  transform: scale(1.1);
+  }
 
 /*========================================================================
 *

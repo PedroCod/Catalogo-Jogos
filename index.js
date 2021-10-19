@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
 const Jogos = require("./models/jogos");
-
+const Confirmlogin = require("./models/confirmlogin");
 
 
 app.get("/", async (req, res) => {
@@ -39,7 +39,9 @@ app.get("/cadastro", (req, res) => {
 });
 
 app.get("/cadusuario", (req, res) => {
-  res.render("cadusuario");
+  res.render("cadusuario",{
+    message
+  });
 });
 
 app.get("/login", (req, res) => {
@@ -63,8 +65,25 @@ app.post("/new", async (req, res) => {
   res.redirect("/",{
     jogo,
   });
-    
+
 });
+app.post("/newcad", async (req,res) =>{
+  const { nome, email, senha, confirmsenha } = req.body;
+
+  const login = await Confirmlogin.create({
+    nome,
+    email,
+    senha,
+    confirmsenha,
+  });
+  res.render("index",{
+    login,
+  });
+});
+app.get("/logado", (req,res)=>{
+
+});
+
 
 app.get("/editar/:id", async (req, res) => {  
   const jogo = await Jogos.findByPk(req.params.id)
