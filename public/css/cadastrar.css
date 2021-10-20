@@ -9,17 +9,17 @@ section#cadastrar {
   margin: 10rem;
   border: 1px solid white;
   box-shadow: 0 0 2rem #ffffff;
-}
-
+  }
+  
 section#cadastrar h2 {
-  color: black;
+  color:black;
   text-align: center;
   padding-bottom: 3rem;
   font-size: 2.5rem;
   width: 100%;
-}
+  }
 
-header#registrar h1 {
+  header#registrar h1 {
   font-family: 'Courier New', Courier, monospace;
   color: #f8f8f8;
   font-size: 30pt;
@@ -27,58 +27,54 @@ header#registrar h1 {
   margin-top: 100px;
   margin-bottom: 20px;
   text-align: center;
-
-}
-
-.label-cadastro input {
+   
+  }
+  
+  .label-cadastro input {
   width: 100%;
   display: inline-block;
-  margin-right: 200px;
+  margin-right: 200px ;
   margin-bottom: 30px;
-  padding: 1rem;
-  border: 0;
+  padding: 1rem;  
+  border:0;
   border-bottom: 1px solid #ffffff;
   background-color: transparent;
   outline: none;
   min-width: 180px;
   font-size: 20px;
-  transition: all .3s ease-out;
+  transition:all .3s ease-out;
   border-radius: 0;
-}
-
-.label-cadastro input:focus {
+  }
+.label-cadastro input:focus{
   border-bottom: 2px solid whitesmoke;
-}
-
-.label-cadastro {
+  }
+.label-cadastro{
   position: relative;
   padding-top: 13px;
   margin-top: 5%;
   margin-bottom: 5%;
-}
-
-.label-cadastro label {
+  }
+  
+.label-cadastro label{
   color: #ffffff;
   pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 13px;
+  margin-top:13px ;
   transition: all .3s ease-out;
-}
-
-.label-cadastro input:focus+label,
-.label-cadastro input:valid+label {
+  }
+  
+.label-cadastro input:focus + label, .label-cadastro input:valid + label{
   font-size: 16px;
   margin-top: 0;
   color: whitesmoke;
-}
-
+  }
 section#cadastrar form div label {
   font-size: 2rem;
   color: rgb(244, 244, 248);
-}
-
+  }
+  
 section#cadastrar form button {
   border: 1px solid rgb(255, 255, 255);
   background-color: #fff;
@@ -93,22 +89,10 @@ section#cadastrar form button {
   cursor: pointer;
   transition: 0.3s ease-out;
   width: 40%;
-}
-
+  }
+  
 section#cadastrar form button:hover {
   background-color: rgb(238, 40, 106);
   color: #fff;
   transform: scale(1.1);
-}
-
-@-webkit-keyframes autofill {
-  to {
-    color: #666;
-    background: transparent;
   }
-}
-
-input:-webkit-autofill {
-  -webkit-animation-name: autofill;
-  -webkit-animation-fill-mode: both;
-}
