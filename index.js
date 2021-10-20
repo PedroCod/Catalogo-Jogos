@@ -38,7 +38,7 @@ app.get("/cadastro", (req, res) => {
   });
 });
 app.get("/sobre",(req,res)=>{
-  res.render("sobrenos")
+  res.render("sobre")
 });
 
 app.post("/new", async (req, res) => {
@@ -50,7 +50,7 @@ app.post("/new", async (req, res) => {
     imagem,
     genero,
   });
-
+  message = `O Jogo ${jogo.nome} foi criado!!!`
   res.redirect("/");
 });
 
@@ -76,7 +76,7 @@ app.post("/editar/:id", async (req, res) => {
 
   const jogoEditado = await jogo.save();
   jogoEditado,
-message = "Jogo editado com sucesso!",
+message = `O jogo ${jogo.nome} foi Editado com sucesso!!`,
   res.redirect("/");
 });
 
