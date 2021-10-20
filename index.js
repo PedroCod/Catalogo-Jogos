@@ -56,7 +56,9 @@ app.post("/new", async (req, res) => {
 
 
 app.get("/editar/:id", async (req, res) => {  
+  
   const jogo = await Jogos.findByPk(req.params.id)
+  
   res.render("editar", {    
     jogo,
     message,
