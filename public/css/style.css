@@ -33,7 +33,7 @@ body {
   /*Faz a imgem de fundo preencher todo o espaço em que ela está */
   background-position: center;
   /* Centraliza a imagem de fundo */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 section#jogos{
   display: flex;

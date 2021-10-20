@@ -50,7 +50,7 @@ section#cadastrar h2 {
   }
 .label-cadastro{
   position: relative;
-  padding-top: 13px;
+  padding-top: 10px;
   margin-top: 5%;
   margin-bottom: 5%;
   }
@@ -74,7 +74,7 @@ section#cadastrar form div label {
   font-size: 2rem;
   color: rgb(244, 244, 248);
   }
-  
+
 section#cadastrar form button {
   border: 1px solid rgb(255, 255, 255);
   background-color: #fff;
