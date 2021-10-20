@@ -35,6 +35,12 @@ body {
   /* Centraliza a imagem de fundo */
   background-repeat: no-repeat;
 }
+section#jogos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .card {
   width: 20rem;
@@ -45,6 +51,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  position: relative;
   justify-content: space-around;
   cursor: pointer;
   transition: transform 0.5s;
@@ -83,7 +90,7 @@ body {
   transform: scale(1.1);
 }
 
-section#jogos h2 {
+section h2 {
   display: flex;
   justify-content: center;
   align-items: center;
