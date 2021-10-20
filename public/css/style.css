@@ -44,7 +44,7 @@ body {
   border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   cursor: pointer;
   transition: transform 0.5s;
   background-color: #ffffff80;
