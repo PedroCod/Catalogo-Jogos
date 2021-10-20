@@ -43,7 +43,7 @@
         <form action="/deletar/<%= jogo.id %>" method="POST">
           <input type="hidden" name="_method" value="DELETE"> 
           <input type="hidden" name="_token" value="the_token">
-          <button type="submit" class="btn btn-link" onclick="if (!confirm(`Você deseja deletar o jogo ${jogo.nome}`)) { return false }"><span>Delete</span></button>
+          <button type="submit" class="btn btn-link" onclick="if (!confirm('Você deseja deletar o jogo?')) { return false }"><span>Delete</span></button>
         </form>
       </ul>
     </div>
